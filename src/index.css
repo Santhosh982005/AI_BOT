@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Nyaya Mitra - Trustworthy & professional legal assistant
+   Deep navy + gold, serif headings. All colors HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 220 45% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 45% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 45% 12%;
+
+    /* Deep navy */
+    --primary: 220 65% 18%;
+    --primary-foreground: 40 40% 96%;
+    --primary-glow: 220 60% 30%;
+
+    /* Gold accent */
+    --accent: 42 65% 52%;
+    --accent-foreground: 220 65% 12%;
+    --accent-soft: 42 70% 88%;
+
+    --secondary: 220 25% 94%;
+    --secondary-foreground: 220 45% 18%;
+
+    --muted: 220 20% 95%;
+    --muted-foreground: 220 15% 42%;
+
+    --destructive: 0 75% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 55% 38%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 220 20% 88%;
+    --input: 220 20% 90%;
+    --ring: 42 65% 52%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 65% 14%) 0%, hsl(220 60% 22%) 50%, hsl(220 55% 30%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 75% 58%), hsl(36 70% 48%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 25% 98%));
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 40px -10px hsl(220 65% 18% / 0.25);
+    --shadow-gold: 0 8px 30px -10px hsl(42 65% 52% / 0.45);
+    --shadow-soft: 0 2px 12px -2px hsl(220 45% 12% / 0.08);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 50% 8%;
+    --foreground: 40 30% 95%;
+    --card: 220 45% 11%;
+    --card-foreground: 40 30% 95%;
+    --popover: 220 45% 11%;
+    --popover-foreground: 40 30% 95%;
+    --primary: 42 65% 58%;
+    --primary-foreground: 220 65% 12%;
+    --primary-glow: 42 70% 65%;
+    --accent: 42 65% 58%;
+    --accent-foreground: 220 65% 12%;
+    --accent-soft: 42 30% 25%;
+    --secondary: 220 35% 18%;
+    --secondary-foreground: 40 30% 95%;
+    --muted: 220 35% 16%;
+    --muted-foreground: 220 15% 65%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 50% 45%;
+    --success-foreground: 0 0% 100%;
+    --border: 220 35% 20%;
+    --input: 220 35% 20%;
+    --ring: 42 65% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv01";
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .gradient-hero { background: var(--gradient-hero); }
+  .gradient-gold { background: var(--gradient-gold); }
+  .gradient-card { background: var(--gradient-card); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .transition-smooth { transition: var(--transition-smooth); }
+}
